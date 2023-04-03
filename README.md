@@ -4,7 +4,7 @@ Ein Projekt, wo ich mit meinen Anfänger php-Skills eine Website kreiere, die ei
 ---
 
 ### Systemanforderungen:
-#### XAMMP Programm
+#### XAMPP Programm
 
 - Ein Programm, das den Apache2 Webserver beinhaltet und es ermöglicht, eine lokale Webserverumgebung auf einem Rechner zu erstellen.
 
