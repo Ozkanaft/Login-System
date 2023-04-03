@@ -4,7 +4,11 @@
     <head>
         <!-- Dekodierungstyp -->
         <meta charset="utf-8">
+
+        <!-- Tab-Titel der Website -->
         <title>Login-System</title>
+
+        <!-- Designerische Aspekte -->
         <style>
             body {      
                 font-family: sans-serif; /* Schriftart */
@@ -23,40 +27,16 @@
     <body>
         <h1>Login-System</h1>
         <p>Hallo Nutzer! Bitte regestrieren Sie sich:</p>
-        <!--
-        'div'-Tag: Damit erstellt man eine Gruppierung von Inhalten.
-        'class'-Attribut: Damit gruppiert man ein Element in eine Klasse, um dessen Stil und Verhalten definieren zu können.
-        -->
+        
+        <!-- Das Einagbe-Formular -->
         <div class="container">
-            <!--
-            'form'-Tag: Damit erstellt man eine HTML-Formularseite.
-            'action'-Attribut: Damit wird die URL des Zielorts angegeben, zu der die eingegebene Daten des Benutzers gesendet werden.
-            'method'-Attribut: Damit wird die Methode festgelegt, mit der die Daten an den Server gesendet werden.
-                -> "post": Anhaengung der Daten an den Body der Anfrage (besser).
-                -> "get" : Anhaengung der Daten an die URL der Seite (schlechter).
-            'target'-Attribut: Damit wird angegeben, wo das Ergebnis eines Formulars angezeigt werden soll.
-            -->
+
+            <!-- Formularerzeugung -->
             <form action="index.php" method="post" target="ausgabe">
-                <!-- 
-                'fieldset'-Tag: Damit werden verwandte Formularelemente gruppiert und visuel strukturiert.
-                -->
                 <fieldset>
-                    <!-- 
-                    'legend'-Tag: Damit definiert man eine Beschriftung für ein "fieldset"-Element.
-                    -->
-                    <legend>Persoenliche Daten:</legend>
+                    <legend>Persönliche Daten:</legend>
                     <p>
-                        <!-- 
-                        'label'-Tag: Damit wird ein Text mit einem Formularelement verknüpft.
-                        'for'-Attribut: Damit verbindet man ein "label"-Element mit einem Formularelement anhand seiner "id".
-                        -->
                         <label for="vorname">Vorname: </label>
-                        <!-- 
-                        'input'-Tag: Damit erstellt man interaktive Formularelemente.
-                        'type'-Attribut: Damit definiert man den Typ eines Formularelements.
-                        'name'-Attribut: Damit definiert man den Namen eines Formularelements.
-                        'id'-Attribut: Damit werden Elemente eindeutig identifiziert und fuers zugreifen ermöglicht.
-                        -->
                         <input type="text" name="vorname" id="vorname" />
                     </p>
                     <p>
@@ -70,5 +50,23 @@
                 </fieldset>
             </form>
         </div>
+
+        <!-- Die Ausgabe -->
+        <div id="ausgabe">
+            <?php
+                // Falls ein Formular unter dem Namen "submit" abgeschickt worden ist
+                if (isset($_POST["submit"]))
+                {
+                    // Initialisierung der Variablen durch die eingegebene Werte
+                    $vorname = $_POST["vorname"];
+                    $nachname = $_POST["nachname"];
+                    
+                    // Ausschreibung der Variablen (mithilfe von Punktbindungen)
+                    echo "<p>";            
+                    echo "Hallo, ".$vorname." ".$nachname.".";
+                    echo "</p>";
+                }   
+            ?>
+        </div>    
     </body>
 </html>
