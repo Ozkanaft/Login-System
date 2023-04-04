@@ -1,0 +1,15 @@
+// Dies sind spezifische Einstellungen für das Projekt
+{
+    // Pfad, wo sich die PHP-Ausführunsdatei befindet
+    "php.validate.executablePath": "/usr/local/bin/php",
+
+    // Pfad, wo sich die PHP-Debugdatei befindet
+    "php.debug.executablePath": "/usr/local/bin/phpdbg",
+
+    "window.zoomLevel": 1,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+
+    // Browserzuweisung, wo das Projekt ausgeführt werden soll
+    "open-php-html-js-in-browser.selectedBrowser": "Chrome"
+}

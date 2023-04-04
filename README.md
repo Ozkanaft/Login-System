@@ -1,6 +1,7 @@
 # Login-System
 Ein Projekt, wo ich mit meinen Anfänger php-Skills eine Website kreiere, die ein Login-System beinhaltet.
 
+<<<<<<< HEAD
 ---
 
 ### Systemanforderungen:
@@ -20,3 +21,10 @@ Ein Projekt, wo ich mit meinen Anfänger php-Skills eine Website kreiere, die ei
 C:\xampp\htdocs\Login-System
 
 - Falls sich die auszuführende php-Datei in einem Unterordner befindet (sprich in dem Projekt-Ordner mit dem Repository), muss dies in der config-Datei des Apache Webservers angegeben werden.
+=======
+## Systemanforderungen bzw. Konfigurationsvoraussetzungen:
+- ...
+
+## Material / Tutorials / Hilfestellungen:
+- https://youtu.be/C0VJsEw-dKM
+>>>>>>> funktion
