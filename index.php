@@ -32,7 +32,7 @@
         <div class="container">
 
             <!-- Formularerzeugung -->
-            <form action="datenausgabe.php" method="post" target="ausgabe">
+            <form action="ausgabe.php" method="post" target="ausgabe">
                 <fieldset>
                     <!-- Steuerlemente für die Dateneingabe -->
                     <p>
@@ -53,10 +53,10 @@
                     </p>
                     <p>
                         <!-- Button für die Formular-Absendung -->
-                        <input type="submit" name="submit" />
+                        <input type="submit" name="submit" value="Regestrieren" />
 
                         <!-- Button fürs Zurücksetzen -->
-                        <input type="reset" />
+                        <input type="reset" value="Abbrechen" />
                     </p>
                 </fieldset>
             </form>
