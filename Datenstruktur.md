@@ -1,4 +1,8 @@
 # Datenstruktur
+<<<<<<< HEAD
+=======
+### Hier sind alle Programmierelemente aufgelistet, die in dem Projekt verwendet werden.
+>>>>>>> main
 ## Tags:
 - div
 ###### Damit erstellt man eine Gruppierung von Inhalten.
@@ -29,6 +33,23 @@
 ###### Damit definiert man den Namen eines Formularelements für die Formulardatenübermittlung.
 - id
 ###### Damit werden Elemente eindeutig identifiziert und fürs zugreifen innerhalb eines Dokuments ermöglicht.
+<<<<<<< HEAD
 ## Funktionen:
 - isset
 ###### Damit kann geprüft werden, ob eine Variable definiert ist oder nicht.
+=======
+- value
+###### Damit können Werte von Formularelementen festgelegt werden.
+## Funktionen:
+- isset()
+###### Damit kann geprüft werden, ob eine Variable definiert ist und ob sie einen Wert enthält.
+- empty()
+###### Damit kann geprüft werden, ob eine Variable einen leeren Wert enthält.
+- header()
+###### Damit kann der Nutzer zu einer bestimmten Seite weitergeleitet werden.
+- exit()
+###### Damit kann eine PHP-Ausführung (bzw. das aktuelle Skript) direkt beendet werden.
+## Superglobale Variablen:
+- $_POST
+###### Ein Array in PHP, was die Daten enthält, die von einem HTML-Formular mit der POST-Methode versendet wurden.
+>>>>>>> main

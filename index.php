@@ -6,7 +6,11 @@
         <meta charset="utf-8">
 
         <!-- Tab-Titel der Website -->
+<<<<<<< HEAD
         <title>Login-System</title>
+=======
+        <title>Registrierung</title>
+>>>>>>> main
 
         <!-- Designerische Aspekte -->
         <style>
@@ -20,11 +24,12 @@
             .container {
                 width: 20%; /* Breite des Elements */
                 margin: left; /* Position des Elements */
-                margin-top: 2em; /* Abstand von dem oberen Element */
+                margin-top: 2em; /* Abstand von dem oberen Element */d
             }
         </style>
     </head>
     <body>
+<<<<<<< HEAD
         <h1>Login-System</h1>
         <p>Hallo Nutzer! Bitte regestrieren Sie sich:</p>
         
@@ -35,6 +40,18 @@
             <form action="index.php" method="post" target="ausgabe">
                 <fieldset>
                     <legend>Persönliche Daten:</legend>
+=======
+        <h1>Registrierung:</h1>
+        <p>Hallo Nutzer! Bitte registrieren Sie sich:</p>
+        
+        <!-- Das Einagbe-Formular fürs Registrieren -->
+        <div class="container">
+
+            <!-- Formularerzeugung -->
+            <form action="ausgabe.php" method="post" target="ausgabe">
+                <fieldset>
+                    <!-- Steuerlemente für die Dateneingabe -->
+>>>>>>> main
                     <p>
                         <label for="vorname">Vorname: </label>
                         <input type="text" name="vorname" id="vorname" />
@@ -44,8 +61,19 @@
                         <input type="text" name="nachname" id="nachname" />
                     </p>
                     <p>
-                        <input type="submit" name="submit" />
-                        <input type="reset" />
+                        <label for="benutzername">Benutzername: </label>
+                        <input type="text" name="benutzername" id="benutzername" />
+                    </p>
+                    <p>
+                        <label for="passwort">Passwort: </label>
+                        <input type="password" name="passwort" id="passwort" />
+                    </p>
+                    <p>
+                        <!-- Button für die Formular-Absendung -->
+                        <input type="submit" name="submit" value="Regestrieren" />
+
+                        <!-- Button fürs Zurücksetzen -->
+                        <input type="reset" value="Abbrechen" />
                     </p>
                 </fieldset>
             </form>
