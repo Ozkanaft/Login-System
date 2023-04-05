@@ -2,6 +2,7 @@
 Ein Projekt, wo ich mit meinen Anfänger php-Skills eine Website kreiere, die ein Login-System beinhaltet.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 
 ### Systemanforderungen:
@@ -26,5 +27,18 @@ C:\xampp\htdocs\Login-System
 - ...
 
 ## Material / Tutorials / Hilfestellungen:
+- https://youtu.be/C0VJsEw-dKM
+>>>>>>> funktion
+=======
+## Benötigte Programme:
+- Visual Studio Code
+- Docker mit DDEV (oder XAMPP)
+- MySQL und MySQL Workbench
+
+## Konfigurationsvoraussetzungen:
+- ...
+
+## Material / Tutorials / Hilfestellungen:
+- https://chat.openai.com/chat
 - https://youtu.be/C0VJsEw-dKM
 >>>>>>> funktion

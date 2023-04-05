@@ -30,6 +30,7 @@
     </head>
     <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h1>Login-System</h1>
         <p>Hallo Nutzer! Bitte regestrieren Sie sich:</p>
         
@@ -41,6 +42,16 @@
                 <fieldset>
                     <legend>Persönliche Daten:</legend>
 =======
+=======
+        <!-- 
+            Eventuell kan das 'Button'-Element für das 'Type' Attribut eine Lösung für die 
+            Fehlerbehandlung sein!
+
+            Bedienung: - Falls keins der Werte NULL ist, wird das Formular abgeschickt.
+                       - Falls nein dann nein.
+        -->
+
+>>>>>>> funktion
         <h1>Registrierung:</h1>
         <p>Hallo Nutzer! Bitte registrieren Sie sich:</p>
         
@@ -59,6 +70,10 @@
                     <p>
                         <label for="nachname">Nachname: </label>
                         <input type="text" name="nachname" id="nachname" />
+                    </p>
+                    <p>
+                        <label for="email">E-Mail: </label>
+                        <input type="text" name="email" id="email" />
                     </p>
                     <p>
                         <label for="benutzername">Benutzername: </label>
