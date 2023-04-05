@@ -1,6 +1,6 @@
 # Datenstruktur
 ### Hier sind alle Programmierelemente aufgelistet, die in dem Projekt verwendet werden.
-## Tags:
+## HTML-Tags:
 - div
 ###### Damit erstellt man eine Gruppierung von Inhalten.
 - form
@@ -13,7 +13,7 @@
 ###### Damit wird ein Text mit einem Formularelement verknüpft.
 - input
 ###### Damit erstellt man interaktive Formularelemente.
-## Attribute:
+## HTML Attribute:
 - class
 ###### Damit gruppiert man ein Element in eine Klasse, um dessen Stil und Verhalten definieren zu können.
 - action
@@ -32,7 +32,7 @@
 ###### Damit werden Elemente eindeutig identifiziert und fürs zugreifen innerhalb eines Dokuments ermöglicht.
 - value
 ###### Damit können Werte von Formularelementen festgelegt werden.
-## Funktionen:
+## PHP Funktionen:
 - isset()
 ###### Damit kann geprüft werden, ob eine Variable definiert ist und ob sie einen Wert enthält.
 - empty()
@@ -41,6 +41,6 @@
 ###### Damit kann der Nutzer zu einer bestimmten Seite weitergeleitet werden.
 - exit()
 ###### Damit kann eine PHP-Ausführung (bzw. das aktuelle Skript) direkt beendet werden.
-## Superglobale Variablen:
+## PHP - Superglobale Variablen:
 - $_POST
 ###### Ein Array in PHP, was die Daten enthält, die von einem HTML-Formular mit der POST-Methode versendet wurden.

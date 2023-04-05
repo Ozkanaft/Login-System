@@ -25,6 +25,7 @@
                 // Initialisierung der Variablen durch die eingesendete Formulardaten
                 $vorname = $_POST["vorname"];
                 $nachname = $_POST["nachname"];
+                $email = $_POST["email"];
                 $benutzername = $_POST["benutzername"];
                 $passwort = $_POST["passwort"];  
                 
@@ -33,6 +34,7 @@
                 echo "<h3>Ihre persönliche Daten lauten folgendermaßen:</h3>";
                 echo "<p>Vorname: " . $vorname . "</p>";
                 echo "<p>Nachname: " . $nachname . "</p>";
+                echo "<p>E-mail: " . $email . "</p>";
                 echo "<p>Passwort: " . $passwort . "</p>";
             ?>
         </div> 
