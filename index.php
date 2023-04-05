@@ -1,3 +1,16 @@
+<?php
+    require ("db_verbindung");
+
+    if (isset($_POST["submit"])) {
+
+        $vorname = $_POST["vorname"];
+        $nachname = $_POST["nachname"];
+        $email = $_POST["email"];
+        $benutzername = $_POST["benutzername"];
+        $passwort = $_POST["passwort"];
+    }
+?>
+
 <!doctype html>
 <!-- Sprache der Website -->
 <html lang="de"> 
@@ -6,11 +19,7 @@
         <meta charset="utf-8">
 
         <!-- Tab-Titel der Website -->
-<<<<<<< HEAD
-        <title>Login-System</title>
-=======
         <title>Registrierung</title>
->>>>>>> main
 
         <!-- Designerische Aspekte -->
         <style>
@@ -29,29 +38,6 @@
         </style>
     </head>
     <body>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <h1>Login-System</h1>
-        <p>Hallo Nutzer! Bitte regestrieren Sie sich:</p>
-        
-        <!-- Das Einagbe-Formular -->
-        <div class="container">
-
-            <!-- Formularerzeugung -->
-            <form action="index.php" method="post" target="ausgabe">
-                <fieldset>
-                    <legend>Persönliche Daten:</legend>
-=======
-=======
-        <!-- 
-            Eventuell kan das 'Button'-Element für das 'Type' Attribut eine Lösung für die 
-            Fehlerbehandlung sein!
-
-            Bedienung: - Falls keins der Werte NULL ist, wird das Formular abgeschickt.
-                       - Falls nein dann nein.
-        -->
-
->>>>>>> funktion
         <h1>Registrierung:</h1>
         <p>Hallo Nutzer! Bitte registrieren Sie sich:</p>
         
@@ -62,7 +48,6 @@
             <form action="ausgabe.php" method="post" target="ausgabe">
                 <fieldset>
                     <!-- Steuerlemente für die Dateneingabe -->
->>>>>>> main
                     <p>
                         <label for="vorname">Vorname: </label>
                         <input type="text" name="vorname" id="vorname" />
@@ -70,10 +55,6 @@
                     <p>
                         <label for="nachname">Nachname: </label>
                         <input type="text" name="nachname" id="nachname" />
-                    </p>
-                    <p>
-                        <label for="email">E-Mail: </label>
-                        <input type="text" name="email" id="email" />
                     </p>
                     <p>
                         <label for="benutzername">Benutzername: </label>
