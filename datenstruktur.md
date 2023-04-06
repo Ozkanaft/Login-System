@@ -37,6 +37,8 @@
 ###### Damit lässt sich ein Text auf einer Website ausschreiben lassen.
 - require
 ###### Damit wird der Inhalt der angegebenen Datei aufgerufen.
+- die
+###### Damit wird das aktuelle Skript beendet.
 ## PHP Funktionen:
 - isset()
 ###### Damit kann geprüft werden, ob eine Variable definiert ist und ob sie einen Wert enthält.
@@ -46,10 +48,16 @@
 ###### Damit kann der Nutzer zu einer bestimmten Seite weitergeleitet werden.
 - exit()
 ###### Damit kann eine PHP-Ausführung (bzw. das aktuelle Skript) direkt beendet werden.
+- ini_set()
+###### Damit können die Einstellungen von Konfigurationsvariablen während eines laufenden Skripts geändert werden.
 - mysqli_connect()
 ###### Damit wird eine Verbindung mit einer SQL-Datenbank aufgebaut.
 - mysqli_connect_error()
 ###### Damit wird der Fehler (der in der letzten Verbindungsanfrage aufgetreten ist) ausgegeben.
+- mysqli_query()
+###### Damit wird eine SQL-Abfrage an eine Datenbank geschickt.
+- mysqli_close()
+###### Damit wird die Verbindung zu einer Datenbank geschlossen.
 ## PHP - Superglobale Variablen:
 - $_POST
 ###### Ein Array in PHP, was die Daten enthält, die von einem HTML-Formular mit der POST-Methode versendet wurden.

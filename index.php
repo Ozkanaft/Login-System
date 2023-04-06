@@ -1,13 +1,16 @@
 <?php
-    require ("db_verbindung");
-
+    // Falls ein Formular unter dem Namen "submit" abgeschickt worden ist
     if (isset($_POST["submit"])) {
 
+        // Initialisierung der Variablen mit den Formulardaten
         $vorname = $_POST["vorname"];
         $nachname = $_POST["nachname"];
         $email = $_POST["email"];
         $benutzername = $_POST["benutzername"];
         $passwort = $_POST["passwort"];
+
+        // Aufrufung des Skripts aus der "db_verbindung.php" und "db_eingabe.php" Datei
+        require ("db_eingabe.php");
     }
 ?>
 
@@ -45,7 +48,7 @@
         <div class="container">
 
             <!-- Formularerzeugung -->
-            <form action="ausgabe.php" method="post" target="ausgabe">
+            <form action="index.php" method="post" target="ausgabe">
                 <fieldset>
                     <!-- Steuerlemente für die Dateneingabe -->
                     <p>
@@ -55,6 +58,10 @@
                     <p>
                         <label for="nachname">Nachname: </label>
                         <input type="text" name="nachname" id="nachname" />
+                    </p>
+                    <p>
+                        <label for="email">E-Mail: </label>
+                        <input type="text" name="email" id="email" />
                     </p>
                     <p>
                         <label for="benutzername">Benutzername: </label>
@@ -73,24 +80,6 @@
                     </p>
                 </fieldset>
             </form>
-        </div>
-
-        <!-- Die Ausgabe -->
-        <div id="ausgabe">
-            <?php
-                // Falls ein Formular unter dem Namen "submit" abgeschickt worden ist
-                if (isset($_POST["submit"]))
-                {
-                    // Initialisierung der Variablen durch die eingegebene Werte
-                    $vorname = $_POST["vorname"];
-                    $nachname = $_POST["nachname"];
-                    
-                    // Ausschreibung der Variablen (mithilfe von Punktbindungen)
-                    echo "<p>";            
-                    echo "Hallo, ".$vorname." ".$nachname.".";
-                    echo "</p>";
-                }   
-            ?>
-        </div>    
+        </div>  
     </body>
 </html>
