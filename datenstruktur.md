@@ -13,6 +13,10 @@
 ###### Damit wird ein Text mit einem Formularelement verknüpft.
 - input
 ###### Damit erstellt man interaktive Formularelemente.
+- link
+###### Damit können Ressourcen (z.B. CSS-Dateien) verknüpft werden.
+- button
+###### Damit wird eine Schaltfläche erstellt.
 ## HTML Attribute:
 - class
 ###### Damit gruppiert man ein Element in eine Klasse, um dessen Stil und Verhalten definieren zu können.
@@ -32,6 +36,10 @@
 ###### Damit werden Elemente eindeutig identifiziert und fürs zugreifen innerhalb eines Dokuments ermöglicht.
 - value
 ###### Damit können Werte von Formularelementen festgelegt werden.
+- rel
+###### Damit wird das Verhältnis zwischen dem HTML-Dokument un der verknüpften Ressource definiert.
+- href
+###### Damit wird ein Link angegeben.
 ## PHP Befehle:
 - echo
 ###### Damit lässt sich ein Text auf einer Website ausschreiben lassen.

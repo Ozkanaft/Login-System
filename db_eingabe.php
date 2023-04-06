@@ -16,11 +16,11 @@
     if (!$conn) {
 
         // Falls keine Verbindung aufgestellt wurde
-        die("<h3> Verbindung zur Datenbank konnte nicht hergestellt werden! </h3>" . mysqli_connect_error());
+        die("<h3> Regestrierung konnte nicht abgeschlossen werden! </h3>" . mysqli_connect_error());
     }
 
     // Falls eine Verbindung aufgestellt wurde
-    echo "Daten wurden erfolgreich übermittelt!";
+    echo "<p> Regestrierung erfolgreich abgeschlossen! </p>";
 
     // Schreiben in die "Nutzer Daten" Tabelle
     $sql = "INSERT INTO `Nutzer Daten` (`ID`, `Vorname`, `Nachname`, `Email`, `Benutzername`, `Passwort`) 

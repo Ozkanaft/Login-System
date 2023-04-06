@@ -1,14 +1,9 @@
+<!-- Skript für die Ausgabe -->
 <!doctype html>
-<!-- Sprache der Website -->
 <html lang="de"> 
     <head>
-        <!-- Dekodierungstyp -->
         <meta charset="utf-8">
-
-        <!-- Tab-Titel der Website -->
-        <title>Persönliche Daten</title>
-
-        <!-- Designerische Aspekte -->
+        <title>Ausgabe</title>
         <style>
             body {      
                 font-family: sans-serif; /* Schriftart */
