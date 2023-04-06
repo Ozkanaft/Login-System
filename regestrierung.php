@@ -3,18 +3,15 @@
     // Falls ein Formular unter dem Namen "regestrieren" abgeschickt worden ist
     if (isset($_POST["regestrieren"])) {
 
-        // Initialisierung der Variablen mit den Formulardaten
-        $vorname = $_POST["vorname"];
-        $nachname = $_POST["nachname"];
-        $email = $_POST["email"];
-        $benutzername = $_POST["benutzername"];
-        $passwort = $_POST["passwort"];
-
         // Aufrufung des Skripts aus der "db_eingabe.php" Datei
         require ("db_eingabe.php");
+    }
 
+    // Falls ein Formular unter dem Namen "menü" abgeschickt worden ist
+    if (isset($_POST["menü_regestrieren"])) {
+
+        // Aufrufung des Skripts aus der "index.php" Datei
         require("index.php");
-        exit();
     }
 ?>
 
@@ -32,7 +29,7 @@
             p {
                 font-size: 1em; /* Schriftgröße */
             }
-            .regestrierung {
+            .container {
                 width: 20%; /* Breite des Elements */
                 margin: left; /* Position des Elements */
                 margin-top: 2em; /* Abstand von dem oberen Element */d
@@ -43,7 +40,7 @@
         <h1>Registrierung</h1>
         <p>Hallo Nutzer! Bitte registrieren Sie sich:</p>
 
-        <div class="regestrierung">
+        <div class="container">
             <!-- Erzeugung des Eingabeformulars -->
             <form action="regestrierung.php" method="post" target="ausgabe">
                 <fieldset>
@@ -73,6 +70,8 @@
 
                         <!-- Button fürs Zurücksetzen der Daten -->
                         <input type="reset" value="Abbrechen" />
+
+                        <input type="submit" name="menü_regestrieren" value="Zurück zum Menü" />
                     </p>
                 </fieldset>
             </form>

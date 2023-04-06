@@ -1,23 +1,22 @@
 <!-- Skript für das Menü -->
-
 <?php
     // Falls ein Formular unter dem Namen "regestrierung" abgeschickt worden ist
-    if (isset($_POST["regestrierung"])) {
+    if (isset($_POST["regestrieren_index"])) {
 
         // Das Skript der "regestrierung.php" Datei wird aufgerufen
         require ("regestrierung.php");
 
-        // Das aktuelle Skript wird verlassen
+        // Verlassen des aktuellen Skripts
         exit();
     }
 
     // Falls ein Formular unter dem Namen "login" abgeschickt worden ist
-    if (isset($_POST["login"])) {
+    if (isset($_POST["login_index"])) {
 
         // Das Skript der "login.php" Datei wird aufgerufen
         require ("login.php");
 
-        // Das aktuelle Skript wird verlassen
+        // Verlassen des aktuellen Skripts
         exit();
     }
 ?>
@@ -43,11 +42,9 @@
     <body>
         <h1>Menü</h1>
         <p>Hallo Nutzer! Bitte wählen Sie eine Option aus:</p>
-        <div class="menü">
-            <form method="post">
-                <input type="submit" name="regestrierung" value="Regestrieren" />
-                <input type="submit" name="login" value="Einloggen" />
-            </form>
-        </div>
+        <form method="post">
+            <input type="submit" name="regestrieren_index" value="Regestrieren" />
+            <input type="submit" name="login_index" value="Einloggen" />
+        </form>
     </body>
 </html>
