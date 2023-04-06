@@ -66,6 +66,12 @@
 ###### Damit wird eine SQL-Abfrage an eine Datenbank geschickt.
 - mysqli_close()
 ###### Damit wird die Verbindung zu einer Datenbank geschlossen.
+- mysqli_num_rows()
+###### ...
+- mysqli_fetch_assoc()
+###### ...
+- session_start()
+###### ...
 ## PHP - Superglobale Variablen:
 - $_POST
 ###### Ein Array in PHP, was die Daten enthält, die von einem HTML-Formular mit der POST-Methode versendet wurden.

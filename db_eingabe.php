@@ -3,6 +3,13 @@
     // Keine automatisch generierte Fehlermeldungen auf der loaklen Website 
     ini_set('display_errors', 0);
 
+    // Initialisierung der Variablen mit den Formulardaten
+    $vorname = $_POST["vorname"];
+    $nachname = $_POST["nachname"];
+    $email = $_POST["email"];
+    $benutzername = $_POST["benutzername"];
+    $passwort = $_POST["passwort"];
+
     // Verbindungsdaten
     $servername = "db";
     $username = "db";
