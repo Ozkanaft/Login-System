@@ -12,6 +12,9 @@
 
         // Aufrufung des Skripts aus der "index.php" Datei
         require("index.php");
+
+        // Verlassen des aktuellen Skripts
+        exit();
     }
 ?>
 
@@ -42,7 +45,7 @@
 
         <div class="container">
             <!-- Erzeugung des Eingabeformulars -->
-            <form action="regestrierung.php" method="post" target="ausgabe">
+            <form action="regestrierung.php" method="post">
                 <fieldset>
                     <!-- Steuerlemente für die Dateneingabe -->
                     <p>

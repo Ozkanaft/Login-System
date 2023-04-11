@@ -42,7 +42,7 @@
     <body>
         <h1>Menü</h1>
         <p>Hallo Nutzer! Bitte wählen Sie eine Option aus:</p>
-        <form method="post">
+        <form action="index.php" method="post">
             <input type="submit" name="regestrieren_index" value="Regestrieren" />
             <input type="submit" name="login_index" value="Einloggen" />
         </form>

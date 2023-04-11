@@ -43,9 +43,13 @@
         echo "<p> Hallo, " . $row['Benutzername'] . "!</p>";
         echo "Dies sind Ihre persönliche Daten:<br>";
         echo "<ul>";
-        echo "<li> Vorname:" . $row['Vorname'] . "</li>";
-        echo "<li> Nachname:" . $row['Nachname'] . "</li>";
-        echo "<li> E-Mail:" . $row['Email'] . "</li>";
+        echo "<li> Vorname: " . $row['Vorname'] . "</li>";
+        echo "<li> Nachname: " . $row['Nachname'] . "</li>";
+        echo "<li> E-Mail: " . $row['Email'] . "</li>";
         echo "</ul";
+    }
+
+    else {
+        echo "Falsche Logindaten!";
     }
 ?>
