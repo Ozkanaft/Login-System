@@ -31,13 +31,8 @@
         <!-- Tab-Titel der Website -->
         <title>Menü</title>
 
-        <!-- Designerische Aspekte -->
-        <style>
-            body {      
-                font-family: sans-serif; /* Schriftart */
-                margin-left: 1em; /* Abstand von dem linken Element */
-            }
-        </style>
+        <!-- Einbindung des CSS Datei in das Projekt -->
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
         <h1>Menü</h1>

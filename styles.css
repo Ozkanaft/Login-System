@@ -1,0 +1,13 @@
+/* Designerische Aspekte des Projekts */
+body {      
+    font-family: sans-serif; /* Schriftart */
+    margin-left: 1em; /* Abstand von dem linken Element */
+}
+p {
+    font-size: 1em; /* Schriftgröße */
+}
+.container {
+    width: 20%; /* Breite des Elements */
+    margin: left; /* Position des Elements */
+    margin-top: 2em; /* Abstand von dem oberen Element */
+}

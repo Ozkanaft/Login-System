@@ -24,20 +24,7 @@
     <head>
         <meta charset="utf-8">
         <title>Registrierung</title>
-        <style>
-            body {      
-                font-family: sans-serif; /* Schriftart */
-                margin-left: 1em; /* Abstand von dem linken Element */
-            }
-            p {
-                font-size: 1em; /* Schriftgröße */
-            }
-            .container {
-                width: 20%; /* Breite des Elements */
-                margin: left; /* Position des Elements */
-                margin-top: 2em; /* Abstand von dem oberen Element */d
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
         <h1>Registrierung</h1>
