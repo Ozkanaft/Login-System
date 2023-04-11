@@ -67,11 +67,15 @@
 - mysqli_close()
 ###### Damit wird die Verbindung zu einer Datenbank geschlossen.
 - mysqli_num_rows()
-###### ...
+###### Damit kann die Anzahl der Zeilen einer Result Syntax angegeben werden, die von einer SQL-Abfrage abgerufen wurde.
 - mysqli_fetch_assoc()
-###### ...
+###### Damit wird eine Zeile einer Result Syntax aus einer SQL-Abfrage ausgegeben bzw. abgerufen.
+- mysqli_real_escape_string()
+###### Damit werden Eingabedaten für SQL-Abfragen bearbeitet. (Schutz vor SQL-Injections).
 - session_start()
-###### ...
+###### Damit wird eine Sitzung eines eindeutigen Benutzers gestartet.
+- hash()
+###### Damit können Zeichenfolge mit einem kryptografischen Hash-Algorithmus umgewandelt werden.
 ## PHP - Superglobale Variablen:
 - $_POST
 ###### Ein Array in PHP, was die Daten enthält, die von einem HTML-Formular mit der POST-Methode versendet wurden.

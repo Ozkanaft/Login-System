@@ -23,16 +23,21 @@
         die("<h3> Die Einloggung konnte nicht vorführt werden! </h3>" . mysqli_connect_error());
     }
 
-    // Prüfung der Benutzereingaben in der Datenbank
-    $sql = "SELECT * FROM `Nutzer Daten` WHERE Benutzername='$benutzername' AND Passwort='$passwort'";
+    // Bearbeitung der Eingabedaten für eine fehlerfreie SQL-Abfrage
+    $benutzername = mysqli_real_escape_string($conn, $_POST["benutzername"]);
+    $passwort = mysqli_real_escape_string($conn, $_POST["passwort"]);
+
+    // Prüfung der Benutzereingaben in der Datenbank 
+    // (Das eingegebene Passwort wird verschlüsselt, damit es mit dem verschlüsseltem Passwort in der Datenbank abgeglichen werden kann)
+    $sql = "SELECT * FROM `Nutzer Daten` WHERE Benutzername='$benutzername' AND Passwort='".hash('sha512', $passwort)."'";
 
     // Verschickung der SQL-Abfrage
     $result = mysqli_query($conn, $sql);
 
-    // Überprüfung, ob die Abfrage erfolgreich war
+    // Falls ein passender Benutzer gefunden wurde
     if (mysqli_num_rows($result) == 1) {
 
-        // Benutzer gefunden
+        // Wiedergebung des Datensatzes
         $row = mysqli_fetch_assoc($result);
 
         $_SESSION['ID'] = $row['ID'];
@@ -50,6 +55,6 @@
     }
 
     else {
-        echo "Falsche Logindaten!";
+        echo "<h3> Falsche Logindaten! </h3>";
     }
 ?>
