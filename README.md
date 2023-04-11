@@ -17,3 +17,4 @@ Ein Projekt, wo ich mit meinen Anfänger php-Skills eine Website kreiere, die ei
 - https://www.youtube.com/watch?v=pdd1fnTcuzU&t=319s
 - https://www.youtube.com/watch?v=bNwT7pqVzDc&t=94s
 - https://www.youtube.com/watch?v=nOJqn4Dw41o&t=352s
+- https://www.youtube.com/watch?v=jort8_4U-88
