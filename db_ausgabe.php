@@ -3,10 +3,6 @@
     // Keine automatisch generierte Fehlermeldungen auf der loaklen Website 
     ini_set('display_errors', 0);
 
-    // Initialisierung der Variablen (die für das Einloggen relevant sind)
-    $benutzername = $_POST["benutzername"];
-    $passwort = $_POST["passwort"];
-
     // Verbindungsdaten
     $servername = "db";
     $username = "db";
@@ -22,6 +18,33 @@
         // Falls keine Verbindung aufgestellt wurde
         die("<h3> Die Einloggung konnte nicht vorführt werden! </h3>" . mysqli_connect_error());
     }
+
+                        // Prüfung, ob der Benutzer bereits eingeloggt ist (Cookie vorhanden und noch nicht abgelaufen)
+                        if (isset($_COOKIE['cookie_daten'])) {
+                            $cookie_data = json_decode($_COOKIE['cookie_daten'], true);
+
+                            // Prüfen, ob der Cookie noch gültig ist
+                            if (time() - $cookie_data['login_time'] <= 300) { // 300 Sekunden = 5 Minuten
+                                // Cookie ist noch gültig, initialisiere Sitzungsvariablen
+                                session_start();
+                                $_SESSION['benutzername'] = $cookie_data['Benutzername'];
+
+                                // Zeige den Datensatz aus der Datenbank an
+                                echo "<h3> Sie wurden erfolgreich eingeloggt! </h3>";
+                                echo "<p> Hallo, " . $cookie_data['Benutzername'] . "!</p>";
+                                echo "Dies sind Ihre persönliche Daten:<br>";
+                                echo "<ul>";
+                                echo "<li> Vorname: " . $cookie_data['Vorname'] . "</li>";
+                                echo "<li> Nachname: " . $cookie_data['Nachname'] . "</li>";
+                                echo "<li> E-Mail: " . $cookie_data['Email'] . "</li>";
+                                echo "</ul>";
+                                exit(); // Skript beenden, da der Benutzer bereits eingeloggt ist
+                            }
+                        }
+
+    // Initialisierung der Variablen (die für das Einloggen relevant sind)
+    $benutzername = $_POST["benutzername"];
+    $passwort = $_POST["passwort"];
 
     // Bearbeitung der Eingabedaten für eine fehlerfreie SQL-Abfrage
     $benutzername = mysqli_real_escape_string($conn, $_POST["benutzername"]);
@@ -40,7 +63,15 @@
         // Wiedergebung des Datensatzes
         $row = mysqli_fetch_assoc($result);
 
-        $_SESSION['ID'] = $row['ID'];
+                            // Startung einer Sitzung
+                            session_start();
+
+                            // Erzeugung eines Cookies mit einer Lebensdauer von 5 Minuten
+                            // (Als "Cookie-Daten" wird der Datensatz gewählt, der zuvor anhand der Logindaten identifiziert wurde).
+                            setcookie("cookie_daten", json_encode($row), time() + 300);
+
+                            // Initialisierung der Cookie-Daten als Sitzungsvariable
+                            $_SESSION['benutzername'] = $row['Benutzername'];
 
         echo "<h3> Sie wurden erfolgreich eingeloggt! </h3>";
 
