@@ -1,10 +1,41 @@
 <!-- Skript für die Regestrierung -->
 <?php
+    // Keine automatisch generierte Fehlermeldungen auf der loaklen Website 
+    ini_set('display_errors', 0);
+
     // Falls ein Formular unter dem Namen "regestrieren" abgeschickt worden ist
     if (isset($_POST["regestrieren"])) {
 
-        // Aufrufung des Skripts aus der "db_eingabe.php" Datei
-        require ("db_eingabe.php");
+        require ("db_verbindung.php");
+
+        // Initialisierung der Variablen mit den Formulardaten
+        $vorname = $_POST["vorname"];
+        $nachname = $_POST["nachname"];
+        $email = $_POST["email"];
+        $benutzername = $_POST["benutzername"];
+        $passwort = $_POST["passwort"];
+
+        // Bearbeitung der Eingabedaten für eine fehlerfreie SQL-Abfrage
+        $vorname = mysqli_real_escape_string($verbindung, $_POST["vorname"]);
+        $nachname = mysqli_real_escape_string($verbindung, $_POST["nachname"]);
+        $email = mysqli_real_escape_string($verbindung, $_POST["email"]);
+        $benutzername = mysqli_real_escape_string($verbindung, $_POST["benutzername"]);
+        $passwort = mysqli_real_escape_string($verbindung, $_POST["passwort"]);
+
+        // Passwort hashen mit dem SHA-512-Algorithmus
+        $hashedPasswort = hash('sha512', $passwort);
+
+        // Schreiben in die "Nutzer Daten" Tabelle
+        $sql = "INSERT INTO `Nutzer Daten` (`ID`, `Vorname`, `Nachname`, `Email`, `Benutzername`, `Passwort`) 
+        VALUES (NULL, '$vorname', '$nachname', '$email', '$benutzername', '$hashedPasswort')";
+
+        // Falls eine SQL-Abfrage verschickt werden konnte
+        if (mysqli_query($verbindung, $sql)) {
+            echo "<h3> Regestrierung erfolgreich abgeschlossen! </h3>";
+        }
+
+        // Schließung der Verbindung zur Datenbank
+        mysqli_close($verbindung);
     }
 
     // Falls ein Formular unter dem Namen "menü" abgeschickt worden ist
@@ -16,55 +47,7 @@
         // Verlassen des aktuellen Skripts
         exit();
     }
+
+    // Aufrufung des Eingabeformular-Skripts fürs Regestrieren
+    require("regestrierung.html");
 ?>
-
-<!-- Das Einagbeformular fürs Registrieren -->
-<!doctype html>
-<html lang="de"> 
-    <head>
-        <meta charset="utf-8">
-        <title>Registrierung</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
-    <body>
-        <h1>Registrierung</h1>
-        <p>Hallo Nutzer! Bitte registrieren Sie sich:</p>
-
-        <div class="container">
-            <!-- Erzeugung des Eingabeformulars -->
-            <form action="regestrierung.php" method="post">
-                <fieldset>
-                    <!-- Steuerlemente für die Dateneingabe -->
-                    <p>
-                        <label for="vorname">Vorname: </label>
-                        <input type="text" name="vorname" id="vorname" />
-                    </p>
-                    <p>
-                        <label for="nachname">Nachname: </label>
-                        <input type="text" name="nachname" id="nachname" />
-                    </p>
-                    <p>
-                        <label for="email">E-Mail: </label>
-                        <input type="text" name="email" id="email" />
-                    </p>
-                    <p>
-                        <label for="benutzername">Benutzername: </label>
-                        <input type="text" name="benutzername" id="benutzername" />
-                    </p>
-                    <p>
-                        <label for="passwort">Passwort: </label>
-                        <input type="password" name="passwort" id="passwort" />
-                    </p>
-                    <p>
-                        <input type="submit" name="regestrieren" value="Regestrieren" />
-
-                        <!-- Button fürs Zurücksetzen der Daten -->
-                        <input type="reset" value="Abbrechen" />
-
-                        <input type="submit" name="menü_regestrieren" value="Zurück zum Menü" />
-                    </p>
-                </fieldset>
-            </form>
-        </div>  
-    </body>
-</html>

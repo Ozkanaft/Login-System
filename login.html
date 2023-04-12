@@ -1,0 +1,38 @@
+<!-- Das Einagbeformular für die Anmeldung -->
+<!doctype html>
+<html lang="de"> 
+    <head>
+        <meta charset="utf-8">
+        <title>Anmeldung</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <h1>Login</h1>
+        <p>Bitte melden Sie sich an:</p>
+
+        <div class="container">
+            <!-- Erzeugung des Eingabeformulars -->
+            <form action="login.php" method="post">
+                <fieldset>
+                    <!-- Steuerlemente für die Dateneingabe -->
+                    <p>
+                        <label for="benutzername">Benutzername: </label>
+                        <input type="text" name="benutzername" id="benutzername" />
+                    </p>
+                    <p>
+                        <label for="passwort">Passwort: </label>
+                        <input type="password" name="passwort" id="passwort" />
+                    </p>
+                    <p>
+                        <input type="submit" name="login" value="Einloggen" />
+
+                        <!-- Button fürs Zurücksetzen der Daten -->
+                        <input type="reset" value="Abbrechen" />
+
+                        <input type="submit" name="menü_login" value="Zurück zum Menü" />
+                    </p>
+                </fieldset>
+            </form>
+        </div>  
+    </body>
+</html>

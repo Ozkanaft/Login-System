@@ -76,16 +76,24 @@
 ###### Damit wird eine Sitzung eines eindeutigen Benutzers gestartet.
 - hash()
 ###### Damit können Zeichenfolge mit einem kryptografischen Hash-Algorithmus umgewandelt werden.
-- setcookie()
+- setcookie(name, value, expire, path, domain, secure, httponly)
 ###### Damit wird ein Cookie erstellt, welch für eine langfristige Speicherung von Daten genutzt werden kann.
 - time()
 ###### Damit kann eine Zeit angegeben werden, um beispielsweise das Ablaufdatum eines Cookies festzulegen.
 - json_encode()
 ###### Damit kann ein PHP-Arrays oder Objekt in ein JSON-formatiertes String umwandelt werden.
+- json_decode()
+###### Damit kann ein JSON-formatierter String zurpck in ein PHP-Array konvertiert werden
+- array()
+###### Damit kann eine Sammlung von Werten erstellt werden und über einen Index aufgerufen werden.
+- file_get_contents()
+###### Damit kann der Inhalt einer Datei wiedergegeben werden
 ## PHP - Superglobalvariablen:
 - $_POST
 ###### Ein Array in PHP, was die Daten enthält, die von einem HTML-Formular mit der POST-Methode versendet wurden.
 - $_SESSION
 ###### Damit können Daten innerhalb einer laufenden Sitzung gespeichert werden.
 - $_COOKIE
-###### ...
+###### Damit kann der Wert eines Cookies aufgerufen werden.
+- $_SERVER
+###### Damit können Informationen über den Server und aktuellen Request aufgerufen werden.
