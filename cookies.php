@@ -1,7 +1,7 @@
 <!-- Skript für die Cookies -->
 <?php
     // Keine automatisch generierte Fehlermeldungen auf der loaklen Website 
-    ini_set("display_errors", 0);
+    // ini_set("display_errors", 0);
 
     if (isset($_POST["cookies_ja"])) {
 
@@ -10,8 +10,11 @@
         // Fortführung der laufenden Sitzung
         session_start();
 
+        // Der Cookie besitzt die ID des Datensatzes als Name
+        $cookie_name = $_SESSION["session_id"];
+
         // Zuweisung der Session-Daten in einem Array (um ihn als den "Cookie-Wert" benutzen zu können)
-        $cookie_daten = array(
+        $cookie_wert = array(
             "cookie_vorname" => $_SESSION["session_vorname"],
             "cookie_nachname" => $_SESSION["session_nachname"],
             "cookie_email" => $_SESSION["session_email"],
@@ -20,18 +23,18 @@
         );
 
         // Erzeugung eines Cookies mit einer Lebensdauer von 5 Minuten
-        // (Der Array wird in ein JSON String umgewandelt, damit er als ein Wert anerkannt werden kann)
-        setcookie("nutzer", json_encode($cookie_daten), time() + 300, "/");
+        // (Die Cookie-Merkmale werden in ein JSON String umgewandelt, damit sie als Merkmale anerkannt werden können)
+        setcookie($cookie_name, json_encode($cookie_wert), time() + 300, "/");
 
         /* 
         Folgendermaßen können Cookie-Daten ausgegeben werden:
         -----------------------------------------------------
 
         // Dekodierung der Cookie-Daten von einem JSON Strings in ein array:
-        $cookie_daten = json_decode($_COOKIE["nutzer"], true);
+        $cookie_wert = json_decode($_COOKIE[$cookie_name], true);
 
-        // Ausgabe:
-        echo "Das Passwort lautet: - " . $cookie_daten["cookie_passwort"] . " -"; 
+        // Cookie-Daten Ausgabe:
+        echo "Das Passwort lautet: - " . $cookie_wert["cookie_passwort"] . " -"; 
         */
     }
 

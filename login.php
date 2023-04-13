@@ -43,6 +43,7 @@
             echo "</ul>";
 
             // Initialisierung der Sitzungs-Daten
+            $_SESSION["session_id"] = $datensatz["ID"];
             $_SESSION["session_vorname"] = $datensatz["Vorname"];
             $_SESSION["session_nachname"] = $datensatz["Nachname"];
             $_SESSION["session_email"] = $datensatz["Email"];
