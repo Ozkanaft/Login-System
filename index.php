@@ -1,7 +1,7 @@
 <!-- Skript für das Menü -->
 <?php
     // Falls ein Formular unter dem Namen "regestrierung" abgeschickt worden ist
-    if (isset($_POST["regestrieren_menü"])) {
+    if (isset($_POST["menü_regestrieren"])) {
 
         // Das Skript der "regestrierung.php" Datei wird aufgerufen
         require ("regestrierung.php");
@@ -11,7 +11,7 @@
     }
 
     // Falls ein Formular unter dem Namen "login" abgeschickt worden ist
-    if (isset($_POST["login_menü"])) {
+    if (isset($_POST["menü_login"])) {
 
         // Das Skript der "login.php" Datei wird aufgerufen
         require ("login.php");
@@ -20,6 +20,5 @@
         exit();
     }
 
-    // Aufrufung des Auswahl-Skripts für das Menü
     require("index.html");
 ?>

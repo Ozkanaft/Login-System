@@ -88,7 +88,7 @@
 ###### Damit kann eine Sammlung von Werten erstellt werden und über einen Index aufgerufen werden.
 - file_get_contents()
 ###### Damit kann der Inhalt einer Datei wiedergegeben werden
-## PHP - Superglobalvariablen:
+## PHP Superglobalvariablen:
 - $_POST
 ###### Ein Array in PHP, was die Daten enthält, die von einem HTML-Formular mit der POST-Methode versendet wurden.
 - $_SESSION
@@ -97,3 +97,10 @@
 ###### Damit kann der Wert eines Cookies aufgerufen werden.
 - $_SERVER
 ###### Damit können Informationen über den Server und aktuellen Request aufgerufen werden.
+## PHP Merkmalen:
+- Unterschied zwischen (=) und (=>)
+###### (=)  Damit werden Werte an Variablen zugewiesen.
+###### (=>) Damit werden Werte an Schlüssel-Wert-Paare in Arrays zugewiesen.
+- Unterschied zwischen ('') und ("")
+###### ('') Damit werden Zeichenfolgen literal ausgewertet (sprich: Wie es im Quellcode steht).
+###### ("") Damit werden Zeichenfolgen mit Variablen ausgewertet.

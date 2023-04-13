@@ -39,7 +39,7 @@
     }
 
     // Falls ein Formular unter dem Namen "menü" abgeschickt worden ist
-    if (isset($_POST["menü_regestrieren"])) {
+    if (isset($_POST["regestrieren_menü"])) {
 
         // Aufrufung des Skripts aus der "index.php" Datei
         require("index.php");
