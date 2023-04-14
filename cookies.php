@@ -45,6 +45,9 @@
 
     if (isset($_POST["cookies_nein"])) {
 
+        // Löschung des Cookies
+        setcookie($cookie_name, "", time() - 1, "/");
+
         echo "<h3> Sie haben Cookies abgelehnt! </h3>";
 
         // Zeige den Datensatz der Sitzung an
@@ -62,11 +65,23 @@
 
     if (isset($_POST["cookies_login"])) {
 
+        // Die Session-Variablen werden auf ein leeren Array gesetzt, damit sie sicher gelöscht werden
+        $_SESSION = array();
+
+        // Beendung der Sitzung
+        session_destroy();
+
         require ("login.php");
         exit();
     }
 
     if (isset($_POST["cookies_menü"])) {
+
+        // Die Session-Variablen werden auf ein leeren Array gesetzt, damit sie sicher gelöscht werden
+        $_SESSION = array();
+
+        // Beendung der Sitzung
+        session_destroy();
 
         require ("index.php");
         exit();

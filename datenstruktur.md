@@ -74,6 +74,8 @@
 ###### Damit werden Eingabedaten für SQL-Abfragen bearbeitet. (Schutz vor SQL-Injections).
 - session_start()
 ###### Damit wird eine Sitzung eines eindeutigen Benutzers gestartet.
+- session_destroy()
+###### Damit wird eine Sitzung beendet.
 - hash()
 ###### Damit können Zeichenfolge mit einem kryptografischen Hash-Algorithmus umgewandelt werden.
 - setcookie(name, value, expire, path, domain, secure, httponly)
