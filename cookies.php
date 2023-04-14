@@ -1,11 +1,9 @@
 <!-- Skript für die Cookies -->
 <?php
     // Keine automatisch generierte Fehlermeldungen auf der loaklen Website 
-    // ini_set("display_errors", 0);
+    ini_set("display_errors", 0);
 
     if (isset($_POST["cookies_ja"])) {
-
-        echo "<p> Sie haben Cookies akzeptiert. </p>";
 
         // Fortführung der laufenden Sitzung
         session_start();
@@ -26,16 +24,19 @@
         // (Die Cookie-Merkmale werden in ein JSON String umgewandelt, damit sie als Merkmale anerkannt werden können)
         setcookie($cookie_name, json_encode($cookie_wert), time() + 300, "/");
 
-        /* 
-        Folgendermaßen können Cookie-Daten ausgegeben werden:
-        -----------------------------------------------------
-
         // Dekodierung der Cookie-Daten von einem JSON Strings in ein array:
         $cookie_wert = json_decode($_COOKIE[$cookie_name], true);
 
-        // Cookie-Daten Ausgabe:
-        echo "Das Passwort lautet: - " . $cookie_wert["cookie_passwort"] . " -"; 
-        */
+        echo "<h3> Sie haben Cookies akzeptiert! </h3>";
+
+        // Zeige den Datensatz vom Cookie an
+        echo "<p> Hallo, " . $cookie_wert["cookie_benutzername"] . "!</p>";
+        echo "Dies sind Ihre persönliche Daten:<br>";
+        echo "<ul>";
+        echo "<li> Vorname: " . $cookie_wert["cookie_vorname"] . "</li>";
+        echo "<li> Nachname: " . $cookie_wert["cookie_nachname"] . "</li>";
+        echo "<li> E-Mail: " . $cookie_wert["cookie_email"] . "</li>";
+        echo "</ul>";
     }
 
     if (isset($_POST["cookies_nein"])) {
