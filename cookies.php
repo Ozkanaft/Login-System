@@ -1,6 +1,5 @@
 <!-- Skript für die Cookies -->
 <?php
-
     // Keine automatisch generierte Fehlermeldungen auf der loaklen Website 
     ini_set("display_errors", 0);
 

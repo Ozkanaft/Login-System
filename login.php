@@ -3,9 +3,23 @@
     // Keine automatisch generierte Fehlermeldungen auf der loaklen Website 
     ini_set("display_errors", 0);
 
+    // Falls es einen Cookie gibt
+    if (isset($_COOKIE[$cookie_name])) {
+    
+        echo "<h4>Zuletzt angemeldete Konten:</h4>";
+        echo '<a href="nutzer.php?link_geklickt=1">' . $cookie_wert["cookie_benutzername"] . '</a>';
+
+        // Falls auf den Link geklickt wurde
+        if (isset($_GET['link_geklickt']) && $_GET['link_geklickt'] == 1) {
+
+            require("nutzer.php");
+            exit();
+        }
+    }
+
     if (isset($_POST["login"])) {
 
-        require ("db_verbindung.php");
+        require("db_verbindung.php");
 
         // Initialisierung der Variablen (die für das Einloggen relevant sind)
         $benutzername = $_POST["benutzername"];
