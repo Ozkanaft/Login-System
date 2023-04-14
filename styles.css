@@ -11,3 +11,8 @@ p {
     margin: left; /* Position des Elements */
     margin-top: 2em; /* Abstand von dem oberen Element */
 }
+.cookies_anzeige {
+    width: 20%;
+    margin: left;
+    margin-top: 2em;
+}
