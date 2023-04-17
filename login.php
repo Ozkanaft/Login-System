@@ -3,14 +3,22 @@
     // Keine automatisch generierte Fehlermeldungen auf der loaklen Website 
     ini_set("display_errors", 0);
 
-    // Falls es einen Cookie gibt
+
+
+
+
+
+
+    // Falls es Cookies gibt
     if (isset($_COOKIE[$cookie_name])) {
 
-        // Start einer Sitzung
-        session_start();
+        echo "<h4>Zuletzt angemeldete Konten:</h4>";
 
         // Dekodierung der Cookie-Daten von einem JSON Strings in ein array:
         $cookie_wert = json_decode($_COOKIE[$cookie_name], true);
+
+        // Start einer Sitzung
+        session_start();
 
         // Initialisierung der Sitzungs-Daten durch die Cookie-Daten
         $_SESSION["session_vorname"] = $cookie_wert["cookie_vorname"];
@@ -19,19 +27,20 @@
         $_SESSION["session_benutzername"] = $cookie_wert["cookie_benutzername"];
         $_SESSION["session_passwort"] = $cookie_wert["cookie_passwort"];
     
-        echo "<h4>Zuletzt angemeldete Konten:</h4>";
+        // Auflistung jeder Cookies
+        foreach ($_COOKIE as $cookie_name => $cookie_wert) {
 
-        // Hier wird ein Link zu der nutzer.php angegeben, der unter dem Benutzername des vorhandenen Cookies steht
-        // (Hier wird außerdem ein Query-Parameter verwendet, mit dem spezifisch geprüft werden kann, ob der Link angeklickt wurde).
-        echo '<a href="nutzer.php?link_geklickt">' . $cookie_wert["cookie_benutzername"] . '</a>';
-
-        // Falls auf einen Link mit der URL "link_geklickt" geklickt wurde
-        if (isset($_GET["link_geklickt"])) {
-
-            require("nutzer.php");
-            exit();
+            // Hier wird ein Link zu der nutzer.php angegeben, der unter dem Benutzername des vorhandenen Cookies steht
+            // (Hier wird außerdem ein Query-Parameter verwendet, mit dem spezifisch geprüft werden kann, welcher Link angeklickt wurde).
+            echo '<a href="nutzer.php?link_geklickt&cookie_name=' . urlencode($cookie_name) . '">' . $cookie_wert["cookie_benutzername"] . '</a> <br>';
         }
     }
+
+
+
+
+
+    
 
     if (isset($_POST["login"])) {
 

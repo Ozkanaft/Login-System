@@ -20,7 +20,7 @@
     
     // Erzeugung eines Cookies mit einer Lebensdauer von 1 Tag
     // (Die Cookie-Merkmale werden in ein JSON String umgewandelt, damit sie als Merkmale anerkannt werden können)
-    setcookie($cookie_name, json_encode($cookie_wert), time() + 86400, "/");
+    setcookie($cookie_name, json_encode($cookie_wert), time() + (24 * 60 * 60), "/");
 
     if (isset($_POST["cookies_ja"])) {
 
@@ -45,7 +45,7 @@
     if (isset($_POST["cookies_nein"])) {
 
         // Löschung des Cookies
-        setcookie($cookie_name, "", time() - 1, "/");
+        setcookie($cookie_name, json_encode($cookie_wert), time() - (24 * 60 * 60), "/");
 
         echo "<h3> Sie haben Cookies abgelehnt! </h3>";
 

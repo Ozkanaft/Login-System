@@ -90,6 +90,8 @@
 ###### Damit kann eine Sammlung von Werten erstellt werden und über einen Index aufgerufen werden.
 - file_get_contents()
 ###### Damit kann der Inhalt einer Datei wiedergegeben werden.
+- urlencode()
+###### Damit kann eine Variable für die Verwendung in einer URL codiert werden.
 ## PHP Superglobalvariablen:
 - $_POST
 ###### Ein Array in PHP, was die Daten enthält, die von einem HTML-Formular mit der POST-Methode versendet wurden.

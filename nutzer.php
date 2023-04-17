@@ -3,8 +3,14 @@
     // Keine automatisch generierte Fehlermeldungen auf der loaklen Website
     ini_set("display_errors", 0);
 
+
+
+
+
+
+
     // Falls auf einen Link mit der URL "link_geklickt" geklickt wurde
-    if (isset($_GET["link_geklickt"])) {
+    if (isset($_GET["link_geklickt"]) && isset($_GET["cookie_name"])) {
 
         // Fortführung der Sitzung
         session_start();
@@ -19,14 +25,20 @@
         echo "</ul>";
     }
 
-    if (isset($_POST["nutzer_login"])) {
 
+
+
+
+
+    
+    if (isset($_POST["nutzer_login"])) {
+        
         // Die Session-Variablen werden auf ein leeren Array gesetzt, damit sie sicher gelöscht werden
         $_SESSION = array();
 
         // Beendung der Sitzung
         session_destroy();
-        
+
         require ("login.php");
         exit();
     }
