@@ -5,12 +5,28 @@
 
     // Falls es einen Cookie gibt
     if (isset($_COOKIE[$cookie_name])) {
+
+        // Start einer Sitzung
+        session_start();
+
+        // Dekodierung der Cookie-Daten von einem JSON Strings in ein array:
+        $cookie_wert = json_decode($_COOKIE[$cookie_name], true);
+
+        // Initialisierung der Sitzungs-Daten durch die Cookie-Daten
+        $_SESSION["session_vorname"] = $cookie_wert["cookie_vorname"];
+        $_SESSION["session_nachname"] = $cookie_wert["cookie_nachname"];
+        $_SESSION["session_email"] = $cookie_wert["cookie_email"];
+        $_SESSION["session_benutzername"] = $cookie_wert["cookie_benutzername"];
+        $_SESSION["session_passwort"] = $cookie_wert["cookie_passwort"];
     
         echo "<h4>Zuletzt angemeldete Konten:</h4>";
-        echo '<a href="nutzer.php?link_geklickt=1">' . $cookie_wert["cookie_benutzername"] . '</a>';
 
-        // Falls auf den Link geklickt wurde
-        if (isset($_GET['link_geklickt']) && $_GET['link_geklickt'] == 1) {
+        // Hier wird ein Link zu der nutzer.php angegeben, der unter dem Benutzername des vorhandenen Cookies steht
+        // (Hier wird außerdem ein Query-Parameter verwendet, mit dem spezifisch geprüft werden kann, ob der Link angeklickt wurde).
+        echo '<a href="nutzer.php?link_geklickt">' . $cookie_wert["cookie_benutzername"] . '</a>';
+
+        // Falls auf einen Link mit der URL "link_geklickt" geklickt wurde
+        if (isset($_GET["link_geklickt"])) {
 
             require("nutzer.php");
             exit();
@@ -56,7 +72,7 @@
             echo "<li> E-Mail: " . $datensatz["Email"] . "</li>";
             echo "</ul>";
 
-            // Initialisierung der Sitzungs-Daten
+            // Initialisierung der Sitzungs-Daten durch die Daten des gefundenen (bzw. passenden) Datensatzes
             $_SESSION["session_id"] = $datensatz["ID"];
             $_SESSION["session_vorname"] = $datensatz["Vorname"];
             $_SESSION["session_nachname"] = $datensatz["Nachname"];

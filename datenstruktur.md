@@ -89,7 +89,7 @@
 - array()
 ###### Damit kann eine Sammlung von Werten erstellt werden und über einen Index aufgerufen werden.
 - file_get_contents()
-###### Damit kann der Inhalt einer Datei wiedergegeben werden
+###### Damit kann der Inhalt einer Datei wiedergegeben werden.
 ## PHP Superglobalvariablen:
 - $_POST
 ###### Ein Array in PHP, was die Daten enthält, die von einem HTML-Formular mit der POST-Methode versendet wurden.
@@ -106,3 +106,7 @@
 - Unterschied zwischen ('') und ("")
 ###### ('') Damit werden Zeichenfolgen literal ausgewertet (sprich: Wie es im Quellcode steht).
 ###### ("") Damit werden Zeichenfolgen mit Variablen ausgewertet.
+- Query-Parameter
+###### Das sind zusätzliche Informationen, die an die Serverseite weitergeleitet werden. (Man kann damit eine URL spezifizieren).
+###### Das (?) wird in der URL-Syntax als Trennzeichen zwischen der Basis-URL und den Query-Parametern verwendet.
+###### Mithilfe von (&) können mehrere Query-Parameter voneinander getrennt werden.
