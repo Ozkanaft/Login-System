@@ -1,8 +1,5 @@
 <!-- Skript für die Regestrierung -->
 <?php
-    // Keine automatisch generierte Fehlermeldungen auf der loaklen Website 
-    ini_set('display_errors', 0);
-
     // Falls ein Formular unter dem Namen "regestrieren" abgeschickt worden ist
     if (isset($_POST["regestrieren"])) {
 

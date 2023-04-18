@@ -1,11 +1,9 @@
 <!-- Skript für die Nutzerdaten-Ausgabe durch einen Cookie -->
 <?php
-    // Keine automatisch generierte Fehlermeldungen auf der loaklen Website
-    ini_set("display_errors", 0);
-
     // Falls auf einen Link mit der URL "link_geklickt" geklickt wurde
     if (isset($_GET['cookie_name'])) {
 
+        // Initialisierung des eingesendeten Cookie-Namen
         $cookie_name = $_GET['cookie_name'];
 
         // Dekodierung der Cookie-Daten von einem JSON Strings in ein array:
@@ -22,24 +20,12 @@
     }
 
     if (isset($_POST["nutzer_login"])) {
-        
-        // Die Session-Variablen werden auf ein leeren Array gesetzt, damit sie sicher gelöscht werden
-        $_SESSION = array();
-
-        // Beendung der Sitzung
-        session_destroy();
 
         require ("login.php");
         exit();
     }
             
     if (isset($_POST["nutzer_menü"])) {
-
-        // Die Session-Variablen werden auf ein leeren Array gesetzt, damit sie sicher gelöscht werden
-        $_SESSION = array();
-
-        // Beendung der Sitzung
-        session_destroy();
 
         require ("index.php");
         exit();

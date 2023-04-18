@@ -92,7 +92,11 @@
 ###### Damit kann der Inhalt einer Datei wiedergegeben werden.
 - urlencode()
 ###### Damit kann eine Variable für die Verwendung in einer URL codiert werden.
+- count()
+###### Damit kann die Anzahl von Elementen zurückgegeben werden.
 ## PHP Superglobalvariablen:
+- $_GET
+###### Ein Array in PHP, was die Daten enthält, die von einem HTML-Formular mit der GET-Methode versendet wurden.
 - $_POST
 ###### Ein Array in PHP, was die Daten enthält, die von einem HTML-Formular mit der POST-Methode versendet wurden.
 - $_SESSION

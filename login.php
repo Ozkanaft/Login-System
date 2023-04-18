@@ -3,23 +3,6 @@
     // Keine automatisch generierte Fehlermeldungen auf der loaklen Website 
     ini_set("display_errors", 0);
 
-    // Überprüfen, ob es Cookies gibt
-    if (count($_COOKIE) > 0) {
-        echo "<h4>Zuletzt angemeldete Konten:</h4>";
-        
-        // Auflistung jeder Cookies
-        // (Der Operator "as" wird hier verwendet, um dem Element "COOKIE" einen Bezeichner und dessen Wert zuzuweisen)
-        foreach ($_COOKIE as $cookie_name => $cookie_wert) {
-
-            // Dekodierung der Cookie-Daten von einem JSON Strings in ein array:
-            $cookie_wert = json_decode($_COOKIE[$cookie_name], true);
-
-            // Hier wird ein Link zu der nutzer.php angegeben, der unter dem Benutzername des vorhandenen Cookies steht
-            // (Hier wird außerdem ein Query-Parameter verwendet, mit dem spezifisch geprüft werden kann, welcher Link angeklickt wurde).
-            echo '<a href="nutzer.php?link_geklickt&cookie_name=' . urlencode($cookie_name) . '">' . $cookie_wert["cookie_benutzername"] . '</a> <br>';
-        }
-    }
-
     if (isset($_POST["login"])) {
 
         require("db_verbindung.php");
@@ -87,4 +70,22 @@
     }
 
     require("login.html");
+
+    // Überprüfen, ob es Cookies gibt
+    if (count($_COOKIE) > 0) {
+
+        echo "<h4>Zuletzt angemeldete Konten:</h4>";
+                
+        // Auflistung jeder Cookies
+        // (Der Operator "as" wird hier verwendet, um dem Element "COOKIE" einen Bezeichner und dessen Wert zuzuweisen)
+        foreach ($_COOKIE as $cookie_name => $cookie_wert) {
+
+            // Dekodierung der Cookie-Daten von einem JSON Strings in ein array:
+            $cookie_wert = json_decode($_COOKIE[$cookie_name], true);
+
+            // Hier wird ein Link zu der nutzer.php angegeben, der unter dem Benutzername des vorhandenen Cookies steht
+            // (Hier wird außerdem ein Query-Parameter verwendet, mit dem spezifisch geprüft werden kann, welcher Link angeklickt wurde).
+            echo '<a href="nutzer.php?cookie_name=' . urlencode($cookie_name) . '">' . $cookie_wert["cookie_benutzername"] . '</a> <br>';
+        }
+    }
 ?>
