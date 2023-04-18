@@ -28,6 +28,7 @@
 
         // Falls eine SQL-Abfrage verschickt werden konnte
         if (mysqli_query($verbindung, $sql)) {
+            
             echo "<h3> Regestrierung erfolgreich abgeschlossen! </h3>";
         }
 

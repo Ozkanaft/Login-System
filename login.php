@@ -50,7 +50,7 @@
             $_SESSION["session_benutzername"] = $datensatz["Benutzername"];
             $_SESSION["session_passwort"] = $datensatz["Passwort"];        
 
-            require("cookies.php");
+            require("nutzer.php");
             exit();
         }
 
@@ -85,7 +85,7 @@
 
             // Hier wird ein Link zu der nutzer.php angegeben, der unter dem Benutzername des vorhandenen Cookies steht
             // (Hier wird außerdem ein Query-Parameter verwendet, mit dem spezifisch geprüft werden kann, welcher Link angeklickt wurde).
-            echo '<a href="nutzer.php?cookie_name=' . urlencode($cookie_name) . '">' . $cookie_wert["cookie_benutzername"] . '</a> <br>';
+            echo '<a href="cookie.php?cookie_name=' . urlencode($cookie_name) . '">' . $cookie_wert["cookie_benutzername"] . '</a> <br>';
         }
     }
 ?>

@@ -1,12 +1,25 @@
-<!-- Skript für das Nutzerformular -->
+<!-- Das Einagbeformular für Cookies -->
 <!doctype html>
 <html lang="de"> 
     <head>
         <meta charset="utf-8">
-        <title>Nutzer</title>
+        <title>Cookies</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
+        <div class="cookies_anzeige">
+            <form action="nutzer.php" method="post">
+                <p>
+                    <fieldset>
+                        <p> Lassen Sie Cookies zu? </p>
+                        <p> 
+                            <input type="submit" name="cookie_ja" value="Ja" />
+                            <input type="submit" name="cookie_nein" value="Nein" />
+                        </p>
+                    </fieldset>
+                </p>
+            </form>
+        </div>
         <div class="nutzer_zurück_anzeige">
             <form action="nutzer.php" method="post">
                 <p> 
