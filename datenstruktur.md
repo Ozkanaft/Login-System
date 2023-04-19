@@ -40,6 +40,45 @@
 ###### Damit wird das Verhältnis zwischen dem HTML-Dokument un der verknüpften Ressource definiert.
 - href
 ###### Damit wird ein Link angegeben.
+- placeholder
+###### Damit kann ein vordefinierter Text in einem Input-Feld angezeigt werden.
+- autocomplete
+###### Damit kann ein Formular automatisch ausgefüllt werden.
+
+## CSS-Stileigenschaften:
+- color
+###### Vordergrundfarbe
+- background-color
+###### Hintergrundfarbe
+- accent-color
+###### ...
+- font-family
+###### Schriftart
+- font-size
+###### Schriftgröße
+- width
+###### Breite eines Elements
+- height
+###### Höhe eines Elements
+- padding
+###### Abstand zwischen dem Inhalt eines HTML-Elements und seinem inneren Rand
+- border
+###### Umrandung eines Input-Elements
+- border-radius
+###### Ecken des Input-Elements
+- margin
+###### Abstand zwischen dem äußeren Rand eines HTML-Elements und den benachbarten Elementen
+- cursor
+###### Verhalten bzw. Aussehene des Mauszeigers
+- display
+###### ...
+- place-items
+###### ...
+- position
+###### Positionierung des Elements innerhalb der Website
+- bottom
+###### Abstand von unten
+
 ## PHP Befehle:
 - echo
 ###### Damit lässt sich ein Text auf einer Website ausschreiben lassen.

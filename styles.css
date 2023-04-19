@@ -1,18 +1,56 @@
 /* Designerische Aspekte des Projekts */
-body {      
-    font-family: sans-serif; /* Schriftart */
-    margin-left: 1em; /* Abstand von dem linken Element */
+body {
+    background-color: #354177;
+    color: #ffffff;
+    font-family: sans-serif;
 }
-p {
-    font-size: 1em; /* Schriftgröße */
+
+a {
+    color: #ffffff;
 }
+
 .container {
-    width: 20%; /* Breite des Elements */
-    margin: left; /* Position des Elements */
-    margin-top: 2em; /* Abstand von dem oberen Element */
+    display: grid;
+    place-items: center;
 }
-.cookies_anzeige {
-    width: 20%;
-    margin: left;
-    margin-top: 2em;
+
+.container a {
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.login-box {
+    padding: 10px;
+}
+
+.login-box > input[type="text"],
+.login-box > input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffffff; /* 'solid' sorgt für eine durchgängige Linie */
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: text;
+}
+
+.login-box > input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    accent-color: #18cd00;
+}
+
+.login-box > button {
+    background-color: #6b7bc3;
+    color: #ffffff;
+    width: 106%;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.login-box > button:hover {
+    background-color: #5768ad;
 }

@@ -59,12 +59,6 @@
         mysqli_close($verbindung);
     }
 
-    if (isset($_POST["login_menü"])) {
-
-        require("index.php");
-        exit();
-    }
-
     require("login.html");
 
     // Überprüfen, ob es Cookies gibt

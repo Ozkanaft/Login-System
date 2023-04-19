@@ -7,29 +7,25 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <h1>Login</h1>
-        <p>Bitte melden Sie sich an:</p>
+        <a href="index.php">Zurück zum Menü</a>
         <div class="container">
+            <h1>Anmeldung</h1>
             <form action="login.php" method="post">
-                <fieldset>
-                    <p>
-                        <label for="benutzername">Benutzername: </label>
-                        <input type="text" name="benutzername" id="benutzername" />
-                    </p>
-                    <p>
-                        <label for="passwort">Passwort: </label>
-                        <input type="password" name="passwort" id="passwort" />
-                    </p>
-                    <p>
-                        <input type="submit" name="login" value="Einloggen" />
-
-                        <!-- Button fürs Zurücksetzen der Daten -->
-                        <input type="reset" value="Abbrechen" />
-
-                        <input type="submit" name="login_menü" value="Zurück zum Menü" />
-                    </p>
-                </fieldset>
+                <div class="login-box">
+                    <input type="text" name="benutzername" id="benutzername" placeholder="Benutzername"/>
+                </div>
+                <div class="login-box">
+                    <input type="password" name="passwort" id="passwort" placeholder="Passwort"/>
+                </div>
+                <div class="login-box">
+                    <input type="checkbox" name="remember_me" id="remember_me"/>
+                    <label for="remember_me">Angemeldet bleiben</label>
+                    <a href="">Passwort vergessen?</a>
+                </div>
+                <div class="login-box">
+                    <button type="submit" name="login">Einloggen</button>
+                </div>
             </form>
-        </div>  
+        </div>
     </body>
 </html>
