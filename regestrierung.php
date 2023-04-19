@@ -5,14 +5,7 @@
 
         require ("db_verbindung.php");
 
-        // Initialisierung der Variablen mit den Formulardaten
-        $vorname = $_POST["vorname"];
-        $nachname = $_POST["nachname"];
-        $email = $_POST["email"];
-        $benutzername = $_POST["benutzername"];
-        $passwort = $_POST["passwort"];
-
-        // Bearbeitung der Eingabedaten für eine fehlerfreie SQL-Abfrage
+        // Initialisierung und Bearbeitung der Eingabedaten für eine fehlerfreie und sichere SQL-Abfrage
         $vorname = mysqli_real_escape_string($verbindung, $_POST["vorname"]);
         $nachname = mysqli_real_escape_string($verbindung, $_POST["nachname"]);
         $email = mysqli_real_escape_string($verbindung, $_POST["email"]);

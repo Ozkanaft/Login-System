@@ -18,6 +18,7 @@
 
         // Inhalt der aktuellen Seite wird wiedergegeben
         echo file_get_contents($_SERVER['SCRIPT_FILENAME']);
+        
         exit();
     }
 ?>

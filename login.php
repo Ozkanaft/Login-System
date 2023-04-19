@@ -7,11 +7,7 @@
 
         require("db_verbindung.php");
 
-        // Initialisierung der Variablen (die für das Einloggen relevant sind)
-        $benutzername = $_POST["benutzername"];
-        $passwort = $_POST["passwort"];
-
-        // Bearbeitung der Eingabedaten für eine fehlerfreie SQL-Abfrage
+        // Initialisierung und Bearbeitung der Eingabedaten für eine fehlerfreie und sichere SQL-Abfrage
         $benutzername = mysqli_real_escape_string($verbindung, $_POST["benutzername"]);
         $passwort = mysqli_real_escape_string($verbindung, $_POST["passwort"]);
                 
@@ -87,5 +83,6 @@
             // (Hier wird außerdem ein Query-Parameter verwendet, mit dem spezifisch geprüft werden kann, welcher Link angeklickt wurde).
             echo '<a href="cookie.php?cookie_name=' . urlencode($cookie_name) . '">' . $cookie_wert["cookie_benutzername"] . '</a> <br>';
         }
+        exit();
     }
 ?>
