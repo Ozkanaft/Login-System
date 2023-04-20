@@ -6,7 +6,7 @@
     // Fortführung der laufenden Sitzung
     session_start();
     
-    if (isset($_POST["cookie_ja"])) {
+    if (isset($_POST["remember_me"])) {
 
         // Der Cookie besitzt die ID des Datensatzes als Name
         $cookie_name = $_SESSION["session_id"];
@@ -23,43 +23,9 @@
         // Erzeugung eines Cookies mit einer Lebensdauer von 1 Monat
         // (Die Cookie-Merkmale werden in ein JSON String umgewandelt, damit sie als Merkmale anerkannt werden können)
         setcookie($cookie_name, json_encode($cookie_wert), time() + (30 * 24 * 60 * 60), "/");
-
-        // Dekodierung der Cookie-Daten von einem JSON Strings in ein array:
-        $cookie_wert = json_decode($_COOKIE[$cookie_name], true);
-
-        echo "<h3> Sie haben Cookies akzeptiert! </h3>";
-
-        // Zeige den Datensatz der Sitzung an
-        echo "<p> Hallo, " . $_SESSION["session_benutzername"] . "!</p>";
-        echo "Dies sind Ihre persönliche Daten:<br>";
-        echo "<ul>";
-        echo "<li> Vorname: " . $_SESSION["session_vorname"] . "</li>";
-        echo "<li> Nachname: " . $_SESSION["session_nachname"] . "</li>";
-        echo "<li> E-Mail: " . $_SESSION["session_email"] . "</li>";
-        echo "</ul>";
-
-        // Die HTML-Klasse "cookies_anzeige" wird ausgeblendet
-        echo "<style>.cookies_anzeige { display: none }</style>";
     }
 
-    if (isset($_POST["cookie_nein"])) {
-
-        echo "<h3> Sie haben Cookies abgelehnt! </h3>";
-
-        // Zeige den Datensatz der Sitzung an
-        echo "<p> Hallo, " . $_SESSION["session_benutzername"] . "!</p>";
-        echo "Dies sind Ihre persönliche Daten:<br>";
-        echo "<ul>";
-        echo "<li> Vorname: " . $_SESSION["session_vorname"] . "</li>";
-        echo "<li> Nachname: " . $_SESSION["session_nachname"] . "</li>";
-        echo "<li> E-Mail: " . $_SESSION["session_email"] . "</li>";
-        echo "</ul>";
-
-        // Die HTML-Klasse "cookies_anzeige" wird ausgeblendet
-        echo "<style>.cookies_anzeige { display: none }</style>";
-    }
-
-    if (isset($_POST["nutzer_login"])) {
+    if (isset($_POST["abmelden"])) {
 
         // Die Session-Variablen werden auf ein leeren Array gesetzt, damit sie sicher gelöscht werden
         $_SESSION = array();
