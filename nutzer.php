@@ -67,18 +67,6 @@
         // Beendung der Sitzung
         session_destroy();
 
-        require ("login.php");
-        exit();
-    }
-
-    if (isset($_POST["nutzer_menü"])) {
-
-        // Die Session-Variablen werden auf ein leeren Array gesetzt, damit sie sicher gelöscht werden
-        $_SESSION = array();
-
-        // Beendung der Sitzung
-        session_destroy();
-
         require ("index.php");
         exit();
     }

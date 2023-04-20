@@ -44,14 +44,13 @@
 ###### Damit kann ein vordefinierter Text in einem Input-Feld angezeigt werden.
 - autocomplete
 ###### Damit kann ein Formular automatisch ausgefüllt werden.
-
 ## CSS-Stileigenschaften:
 - color
 ###### Vordergrundfarbe
 - background-color
 ###### Hintergrundfarbe
 - accent-color
-###### ...
+###### Hintergrund von Formularelementen (beispielsweise Checkbox)
 - font-family
 ###### Schriftart
 - font-size
@@ -71,14 +70,13 @@
 - cursor
 ###### Verhalten bzw. Aussehene des Mauszeigers
 - display
-###### ...
+###### Steuerung des Verhaltens eines HTML-Elements
 - place-items
-###### ...
+###### Ausrichtung von Elementen in einem Grid-Container
 - position
 ###### Positionierung des Elements innerhalb der Website
 - bottom
 ###### Abstand von unten
-
 ## PHP Befehle:
 - echo
 ###### Damit lässt sich ein Text auf einer Website ausschreiben lassen.

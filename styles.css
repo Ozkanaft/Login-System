@@ -12,19 +12,19 @@ a {
 .container {
     display: grid;
     place-items: center;
+    padding: 20px;
 }
 
 .container a {
-    color: #ffffff;
     margin-left: 20px;
 }
 
-.login-box {
+.container .index-box {
     padding: 10px;
 }
 
-.login-box > input[type="text"],
-.login-box > input[type="password"] {
+.container .index-box > input[type="text"],
+.container .index-box > input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ffffff; /* 'solid' sorgt für eine durchgängige Linie */
@@ -33,16 +33,16 @@ a {
     cursor: text;
 }
 
-.login-box > input[type="checkbox"] {
+.container .index-box > input[type="checkbox"] {
     width: 15px;
     height: 15px;
     accent-color: #18cd00;
 }
 
-.login-box > button {
+.container .index-box > button {
     background-color: #6b7bc3;
     color: #ffffff;
-    width: 106%;
+    width: 107%;
     padding: 10px;
     border: 1px solid #ffffff;
     border-radius: 8px;
@@ -51,6 +51,11 @@ a {
     cursor: pointer;
 }
 
-.login-box > button:hover {
+.container .index-box > button:hover {
     background-color: #5768ad;
+}
+
+.container .register-link {
+    margin-top: 13px;
+    margin-left: 108px;
 }
