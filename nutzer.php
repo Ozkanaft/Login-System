@@ -33,7 +33,7 @@
         // Beendung der Sitzung
         session_destroy();
 
-        require ("index.php");
+        require("index.php");
         exit();
     }
 

@@ -14,16 +14,14 @@ a {
     place-items: center;
     padding: 20px;
 }
-  
-/*
+
 .container a {
     margin-left: 20px;
 }
-*/
 
 .container .input-box {
-    width: 150%;
     padding: 10px;
+    width: 343px;
 }
 
 .container .input-box > input[type="text"],

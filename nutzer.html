@@ -1,17 +1,25 @@
-<!-- Das Einagbeformular für Cookies -->
+<!-- Das Ein- bzw. Ausgabeformular für Nutzerdaten -->
 <!doctype html>
 <html lang="de"> 
     <head>
         <meta charset="utf-8">
-        <title>Nutzer</title>
+        <title><?php echo $_SESSION["session_benutzername"] ?></title>
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <div class="nutzer_anzeige">
+        <div class="container">
+            <h3>Sie haben sich erfolgreich angemeldet!</h3>  
+            <p>Hallo, <?php echo $_SESSION["session_benutzername"]; ?>!</p>
+            <p>Dies sind Ihre persönlichen Daten:</p>
+            <ul>
+                <li>Vorname: <?php echo $_SESSION["session_vorname"]; ?></li>
+                <li>Nachname: <?php echo $_SESSION["session_nachname"]; ?></li>
+                <li>E-Mail: <?php echo $_SESSION["session_email"]; ?></li>
+            </ul>
             <form action="nutzer.php" method="post">
-                <p> 
-                    <input type="submit" name="abmelden" value="Abmelden" />
-                </p>
+                <div class="input-box">
+                    <button type="submit" name="abmelden">Abmelden</button>
+                </div>
             </form>
         </div>
     </body>
