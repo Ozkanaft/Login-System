@@ -41,7 +41,7 @@
 
     if (isset($_POST["cookie_abmelden"])) {
 
-        require("login.php");
+        require("index.php");
         exit();
     }
 

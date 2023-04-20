@@ -59,6 +59,12 @@
         mysqli_close($verbindung);
     }
 
+    if (isset($_POST["regestrieren1"])) {
+
+        require("regestrierung.php");
+        exit();
+    }
+
     require("index.html");
 
     // Überprüfen, ob es Cookies gibt

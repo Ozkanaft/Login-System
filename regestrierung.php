@@ -1,7 +1,7 @@
 <!-- Skript für die Regestrierung -->
 <?php
     // Falls ein Formular unter dem Namen "regestrieren" abgeschickt worden ist
-    if (isset($_POST["regestrieren"])) {
+    if (isset($_POST["regestrieren2"])) {
 
         require ("db_verbindung.php");
 
@@ -30,7 +30,7 @@
     }
 
     // Falls ein Formular unter dem Namen "menü" abgeschickt worden ist
-    if (isset($_POST["regestrieren_menü"])) {
+    if (isset($_POST["zurück"])) {
 
         // Aufrufung des Skripts aus der "index.php" Datei
         require("index.php");

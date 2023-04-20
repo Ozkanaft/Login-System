@@ -7,43 +7,30 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <h1>Registrierung</h1>
-        <p>Bitte registrieren Sie sich:</p>
-
         <div class="container">
-            <!-- Erzeugung des Eingabeformulars -->
+            <h1>Registrieren</h1>
             <form action="regestrierung.php" method="post">
-                <fieldset>
-                    <!-- Steuerlemente für die Dateneingabe -->
-                    <p>
-                        <label for="vorname">Vorname: </label>
-                        <input type="text" name="vorname" id="vorname" />
-                    </p>
-                    <p>
-                        <label for="nachname">Nachname: </label>
-                        <input type="text" name="nachname" id="nachname" />
-                    </p>
-                    <p>
-                        <label for="email">E-Mail: </label>
-                        <input type="text" name="email" id="email" />
-                    </p>
-                    <p>
-                        <label for="benutzername">Benutzername: </label>
-                        <input type="text" name="benutzername" id="benutzername" />
-                    </p>
-                    <p>
-                        <label for="passwort">Passwort: </label>
-                        <input type="password" name="passwort" id="passwort" />
-                    </p>
-                    <p>
-                        <input type="submit" name="regestrieren" value="Regestrieren" />
-
-                        <!-- Button fürs Zurücksetzen der Daten -->
-                        <input type="reset" value="Abbrechen" />
-
-                        <input type="submit" name="regestrieren_menü" value="Zurück zum Menü" />
-                    </p>
-                </fieldset>
+                <div class="input-box">
+                    <input type="text" name="vorname" id="vorname" placeholder="Vorname"/>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="nachname" id="nachname" placeholder="Nachname"/>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="email" id="email" placeholder="E-mail"/>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="benutzername" id="benutzername" placeholder="Benutzername"/>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="passwort" id="passwort" placeholder="Passwort"/>
+                </div>
+                <div class="input-box">
+                    <button type="submit" name="regestrieren2">Regestrieren</button>
+                </div>
+                <div class="input-box">
+                    <button type="submit" name="zurück">Zurück zu der Anmeldung</button>
+                </div>
             </form>
         </div>  
     </body>
